@@ -1,0 +1,3 @@
+QBITS = 3
+WIDTH = 2**QBITS
+HEIGHT = 7
