@@ -8,8 +8,11 @@ class Player:
             (96,64)
         )
         self.health = 3
-        self.position = (0,64*HEIGHT)
+        self.position = (0,64*(HEIGHT-1))
 
     def move(self, displacement):
         position = self.position[0] + displacement
-        self.position = (max(0, min((WIDTH-1)*96, position)), 64*HEIGHT)
+        self.position = (
+            max(0, min((WIDTH-1)*96, position)), 
+            self.position[1]
+        )
